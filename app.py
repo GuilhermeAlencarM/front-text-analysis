@@ -10,13 +10,13 @@ st.title(':memo: Análise de Texto')
 
 # Introdução
 st.markdown("""
-Bem-vindo ao Analisador de Texto! Esta ferramenta permite que você faça análise de sentimentos e detecção de idioma em textos.
+Bem-vindo ao Analisador de Texto! Esta ferramenta permite que você faça detecção de idioma e análise de sentimentos em textos.
 """)
 
 # Dividindo a página em duas colunas para análise de sentimentos e detecção de idioma
 col1, col2 = st.columns(2)
 
-with col1:
+with col2:
     # Seção de análise de sentimentos
     st.header(":smiley: Analisador de Sentimentos")
     user_input_sentiment = st.text_area("Insira o texto para análise de sentimento:", height=120, key="sentiment")
@@ -40,7 +40,7 @@ with col1:
         else:
             st.error('Falha na análise de sentimento. Verifique a API.')
 
-with col2:
+with col1:
     # Seção de detecção de idioma
     st.header(":speech_balloon: Detector de Idioma")
     user_input_language = st.text_area("Insira o texto para detecção de idioma:", height=120, key="language")
