@@ -64,6 +64,24 @@ with col2:
         else:
             st.error('Falha na detecção de idioma. Verifique a API.')
 
+
+logo_url = "https://www.handtalk.me/br/wp-content/uploads/sites/8/2022/02/Grupo-4225.png"
+st.markdown(
+    f"""
+    <style>
+    .logo {{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 120px;  # Ajuste a largura conforme necessário
+    }}
+    </style>
+    <img class="logo" src="{logo_url}">
+    """,
+    unsafe_allow_html=True
+)
+
+
 # Espaço no final da página
 st.markdown("---")
 st.markdown("*Obrigado por usar nossa ferramenta de análise de texto!*")
