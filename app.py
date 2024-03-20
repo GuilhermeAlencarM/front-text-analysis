@@ -85,3 +85,20 @@ st.markdown(
 # Espaço no final da página
 st.markdown("---")
 st.markdown("*Obrigado por usar nossa ferramenta de análise de texto!*")
+
+hide_streamlit_style = """
+                <style>
+                #MainMenu {
+                visibility: hidden;
+                height: 0%;
+                }
+                footer {
+                visibility: hidden;
+                height: 0%;
+                }
+                div.st-emotion-cache-1wbqy5l.e17vllj40 span {
+                display: none;
+                }
+                </style>
+                """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
